@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title>Find result</title>
+    </head>
+    <body>
+        {% if name == 'admin' %}
+            <h1>Hello admin</h1>
+        {% else %}
+            <h1>Hello {{ name }} as guest user</h1>
+        {% endif %}
+    </body>
+</html>
