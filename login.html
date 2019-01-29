@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Login</title>
+        <script type="text/javascript" src = "{{ url_for('static', filename = 'hello.js') }}" >
+        </script>
+        <link type="text/css" rel="stylesheet" src = "{{ url_for('static', filename = 'index.css') }}" />
+    </head>
+    <body>
+        <input type="button" value="Login as guest" onclick="login_as_guest()"/>
+        <form action="http://localhost:5000/login" method="POST">
+            <legend>Login details</legend>
+            <p>Enter name:<input type="text" name="name" /></p>
+            <p>Enter password:<input type="password" name="pwd" /></p>
+            <input type="submit" value="Submit" name="submit_button"/>
+        </form>
+    </body>
+</html>
