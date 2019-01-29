@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Form data</title>
+    </head>
+    <body>
+        <p>User details:</p>
+        <table>
+            {% for key,value in data.items() %}
+                {% if key != 'submit_button' %}
+                    <tr>
+                        <th> {{ key }}</th>
+                        <td> {{ value }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+    </body>
+</html>

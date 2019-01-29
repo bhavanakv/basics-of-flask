@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Login</title>
+        <script type="text/javascript" src = "{{ url_for('static', filename = 'hello.js') }}" >
+        </script>
+        <link type="text/css" rel="stylesheet" src = "{{ url_for('static', filename = 'index.css') }}" />
+    </head>
+    <body>
+        <form action="http://localhost:5001/form" method="POST">
+            <legend>Login details</legend>
+            <p>Enter name:<input type="text" name="name" /></p>
+            <p>Enter DOB:<input type="date" name="pwd" /></p>
+            <input type="submit" value="Submit" name="submit_button"/>
+        </form>
+    </body>
+</html>
