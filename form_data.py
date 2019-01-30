@@ -1,15 +1,9 @@
 from flask import Flask, render_template, request, make_response
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/home/bhavana/Desktop/Flask/', static_folder='static/')
 
 @app.route("/")
 def form():
     return render_template('login.html')
-
-@app.route('/form', methods= ['GET', 'POST'])
-
-#def print_form():
-#    form_data = request.form
-#    return render_template('data.html', data = form_data)
 
 def setcookie():
     if request.method == 'POST':
