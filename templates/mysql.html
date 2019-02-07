@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Using database in flask</title>
+    </head>
+    <body>
+        <form name="Form" method="POST" action="http://localhost:5001/mysql">
+            <p>Name: <input type="text" name="username" /></p>
+            <p>Phone: <input type="tel" name="phone" /></p>
+            <p>City: 
+                <select name="city">
+                    <option>Bangalore</option>
+                    <option>Hyderabad</option>
+                    <option>Noida</option>
+                </select>
+            </p>
+            <p><input type="submit" value="Add" onclick="hello()" /></p>
+            <br />
+        </form>       
+        <div>
+            {% for item in data %}
+            <table>
+                <td>{{ item[0] }}</td>
+                <td>{{ item[1] }}</td>
+                <td>{{ item[2] }}</td>
+            </table>
+            {% endfor %}
+        </div>
+    </body>
+</html>
